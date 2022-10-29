@@ -119,6 +119,7 @@ DATABASES["default"] = dj_database_url.parse(
 )
 
 MIDDLEWARE += [    
+    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
