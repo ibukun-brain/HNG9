@@ -32,8 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app',
-    'corsheaders',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -44,6 +44,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'task1.urls'
@@ -118,10 +120,6 @@ DATABASES["default"] = dj_database_url.parse(
     get_env_variable("PROD_DATABASE_URL"), conn_max_age=600
 )
 
-MIDDLEWARE += [    
-    "corsheaders.middleware.CorsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
@@ -146,3 +144,7 @@ SECRET_KEY = get_env_variable('SECRET_KEY')
 DEBUG = get_env_variable('DEBUG')
 ALLOWED_HOSTS = ['127.0.0.1', "hng9-production-086f.up.railway.app"]
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://cors-test.codehappy.dev/"
+]
