@@ -5,10 +5,9 @@ from task1.utils.env_variables import get_env_variable
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_env_variable('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = get_env_variable('DEBUG')
-DEBUG = True
+DEBUG = get_env_variable('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["hng9-production-086f.up.railway.app"]
 
 DATABASES["default"] = dj_database_url.parse(
     get_env_variable("PROD_DATABASE_URL"), conn_max_age=600
