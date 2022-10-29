@@ -5,7 +5,7 @@ from app.models import HNGProfile
 @admin.register(HNGProfile)
 class HNGProfileAdmin(admin.ModelAdmin):
     list_display = [
-        "username",
+        "slackUsername",
         "backend",
         "age",
         "bio"

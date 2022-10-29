@@ -5,4 +5,4 @@ class HNGProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HNGProfile
-        fields = ['username','backend','age','bio']
+        fields = '__all__'

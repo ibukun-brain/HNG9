@@ -144,5 +144,5 @@ STATICFILES_DIR = [
 SECRET_KEY = get_env_variable('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_env_variable('DEBUG')
-ALLOWED_HOSTS = ["hng9-production-086f.up.railway.app"]
+ALLOWED_HOSTS = ['127.0.0.1', "hng9-production-086f.up.railway.app"]
 CORS_ALLOW_ALL_ORIGINS = True
