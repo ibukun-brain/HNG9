@@ -142,8 +142,6 @@ STATICFILES_DIR = [
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_env_variable('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = get_env_variable('DEBUG')
-ALLOWED_HOSTS = []
+DEBUG = get_env_variable('DEBUG')
 
-# ALLOWED_HOSTS = ["hng9-production-086f.up.railway.app"]
+ALLOWED_HOSTS = ["hng9-production-086f.up.railway.app"]
